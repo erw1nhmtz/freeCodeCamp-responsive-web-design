@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PlantCareApp</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <main>
+            <h1>PlantCareApp</h1>
+
+            <!-- This section is about popular houseplants -->
+            <section>
+                <h2>Popular Houseplants</h2>
+                <p>Discover more <a href="www.plantsphotoapp.com/gallery" target="_blank">plant varieties</a> in our gallery</p>
+                <a href="www.plantsphotoapp.com/gallery" target="_blank">
+                    <img src="img/monstera_deliciosa.jpg" alt="A lush Monstera Deliciosa plant with large, green leaves">
+                </a>
+            </section>
+
+            <!-- This section is about plant care basics -->
+            <section>
+                <h2>Plant Care Basics</h2>
+                <h3>Essential care tips:</h3>
+
+                <ul>
+                    <li>Regular watering</li>
+                    <li>Proper lightning</li>
+                    <li>Fertilization</li>
+                </ul>
+
+                <figure>
+                    <img src="img/watering_plant.jpg" alt="Person watering a potted plant">
+                    <figcaption>Plants need <em>consistent</em> care</figcaption>
+                </figure>
+
+                <h3>Common plant care mistakes:</h3>
+                <ol>
+                    <li>Overwatering</li>
+                    <li>Insufficient light</li>
+                    <li>Neglecting pest control</li>
+                </ol>
+
+                <figure>
+                    <img src="img/overwatered_plant.jpg" alt="An owerwatered plant with yellowing leaves">
+                    <figcaption>Overwatering can <strong>harm</strong> your plants</figcaption>
+                </figure>
+            </section>
+
+            <!-- This section is about plant care survey -->
+            <section>
+                <h2>Plant Care Survey</h2>
+                <form action="some_action_page_address.html">
+                    <fieldset>
+                        <legend>How often do you water your plants?</legend>
+
+                        <input checked id="daily" type="radio" name="daily-weekly" value="daily">
+                        <label for="daily">Daily</label>
+
+                        <input id="weekly" type="radio" name="daily-weekly" value="weekly">
+                        <label for="weekly">Weekly</label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>What type of plants do you have?</legend>
+
+                        <input checked id="succulents" type="checkbox" name="plants-type" value="succulents">
+                        <label for="succulents">Succulents</label>
+
+                        <input id="flowering" type="checkbox" name="plants-type" value="flowering">
+                        <label for="flowering">Flowering</label>
+
+                        <input id="foliage" type="checkbox" name="plants-type" value="foliage">
+                        <label for="foliage">Foliage</label>
+                    </fieldset>
+
+                    <input required id="favorite-plant" type="text" name="favorite-plant" placeholder="Your favorite plant">
+                    <button id="submit-button" type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created by <a href="plantcareapp.com" target="_blank">PlantCareApp.com</a></p>
+        </footer>
+    </body>
+</html>

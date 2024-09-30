@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adventure Travel Blog</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <header>
+            <h1>Adventure Travel Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#tips">Travel Tips</a></li>
+                    <li><a href="#gallery">Photo Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- This section is about top destinations -->
+            <section>
+                <h2>Top Destinations</h2>
+
+                <h3>Bali Indonesia</h3>
+                <img src="img/bali_beach.jpg" alt="Beautiful beach in Bali with traditional boats">
+                <p>Discover the magic of Bali, from its pristine beaches to lush rice terraces and ancient temples</p>
+                <a href="travel.com/bali" target="_blank">Read More</a>
+
+                <h3>Machu Picchu, Peru</h3>
+                <img src="img/machu_picchu.jpg" alt="Ancient Incan ruins of Machu Picchu">
+                <p>Explore the mystical ruins of the Incan Empire nestled high in the Andes Mountains</p>
+                <a href="travel.com/machupicchu" target="_blank">Read More</a>
+            </section>
+
+            <!-- This section is about essential travel tips -->
+            <section>
+                <h2>Essential Travel Tips</h2>
+
+                <h3>Packing Wisely:</h3>
+                <ul>
+                    <li>Roll clothes to save space</li>
+                    <li>Pack versatile clothing items</li>
+                    <li>Don't forget a universal adapter</li>
+                </ul>
+
+                <h3>Staying Safe:</h3>
+                <ol>
+                    <li>Research your destination</li>
+                    <li>Keep important documents secure</li>
+                    <li>Stay aware of your surroundings</li>
+                </ol>
+            </section>
+
+            <!-- This section is about photo gallry -->
+            <section>
+                <h2>Photo Gallery</h2>
+
+                <figure>
+                    <img src="img/santorini_sunset.jpg" alt="Stunning sunset over Santorini, Greece">
+                    <figcaption>Breathtaking <em>sunset</em> in Santorini</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/the_great_wall.jpg" alt="The Great Wall of China stretching across mountains">
+                    <figcaption>The <strong>Great Wall</strong> of China</figcaption>
+                </figure>
+            </section>
+
+            <!-- This section is about us -->
+            <section>
+                <h2>About Us</h2>
+                <p>We are a team of passionate travelers sharing our experiences and tips to inspire your next adventure.</p>
+                
+                <h3>Our Team:</h3>
+                <ul>
+                    <li>Jane Doe - Adventure Seeker</li>
+                    <li>John Smith - Photography Expert</li>
+                    <li>Emily Brown - Culture Enthusiast</li>
+                </ul>
+            </section>
+
+            <!-- This section is about contact us form -->
+            <section>
+                <h2>Contact Us</h2>
+
+                <form action="adventuretravelblog.com/some-page">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        
+                        <label for="name">Name:</label>
+                        <input required id="name" type="text" name="name" placeholder="Your Name">
+
+                        <label for="email">Email:</label>
+                        <input required id="email" type="email" name="email" placeholder="Your Email">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Trevel Interests</legend>
+
+                        <input checked id="culture" type="checkbox" name="travel-interests" value="culture">
+                        <label for="culture">Culture</label>
+
+                        <input id="nature" type="checkbox" name="travel-interests" value="nature">
+                        <label for="nature">Nature</label>
+
+                        <input id="food" type="checkbox" name="travel-interests" value="food">
+                        <label for="food">Food</label>
+
+                        <input id="adventure" type="checkbox" name="travel-interests" value="adventure">
+                        <label for="adventure">Adventure</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
+                        
+                        <input checked id="email-method" type="radio" name="contact-method" value="email">
+                        <label for="email-method">Email</label>
+
+                        <input id="phone-method" type="radio" name="contact-method" value="phone">
+                        <label for="phone-method">Phone</label>
+                    </fieldset>
+
+                    <label for="bio">Your Message:</label>
+                    <textarea require id="bio" cols="30" rows="5" placeholder="Tell us about your travel plans or questions"></textarea>
+                    <button id="submit" type="submit">Send message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Adventure Travel Blog. All rights reserved.</p>
+            <p>Follow us on social media: 
+                <a href="www.facebook.com/some-url" target="_blank">Facebook</a> |
+                <a href="www.instagram.com/some-url" target="_blank">Instagram</a> |
+                <a href="www.twitter.com/some-url" target="_blank">Twitter</a>
+            </p>
+        </footer>
+    </body>
+</html>
