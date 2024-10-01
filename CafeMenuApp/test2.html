@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Emma's Photography Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/test2.css" />
+    </head>
+
+    <body>
+        <div class="portfolio">
+            <header>
+                <div class="logo">
+                    <h1 class="name-line">Emma Johnson</h1>
+                    <p class="tag-line">Nature & Wildlife Photographer</p>
+                </div>
+                
+                <div class="navigation"> 
+                    <nav>
+                        <ul>
+                            <a href="#about"><li>About</li></a>
+                            <a href="#portfolio"><li>Portfolio</li></a>
+                            <a href="#services"><li>Services</li></a>
+                            <a href="#contact"><li>Contact</li></a>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main>
+                <!-- This section is about me -->
+                <section id="about" class="about-me">
+                    <h2>About Me</h2>
+                    <hr>
+                    <img src="img/emma-johnson.jpg" alt="picture of emma johnson (me)">
+                    <p>Hello! I'm Emma, a passionate nature and wildlife photographer based in Colorado. 
+                        With over 10 years of experience, I specialize in capturing the raw beauty of the natural world.</p>
+                </section>
+
+                <!-- This section is about portfolio -->
+                <section id="portfolio" class="gallery">
+                    <h2>Portfolio</h2>
+                    <hr>
+                    <p></p>
+
+                    <figure>
+                        <img src="img/mountain-landscape.jpg" alt="Mountain landscape">
+                        <figcaption>Mountain landscape</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/bear-in-the-forest.jpg" alt="A bear in the forest">
+                        <figcaption>A bear in the forest</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/sunset-over-the-lake.jpg" alt="Sunset over the lake">
+                        <figcaption>Sunset over the lake</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/eagle-in-flight.jpg" alt="An eagle in flight">
+                        <figcaption>An eagle in flight</figcaption>
+                    </figure>
+                </section>
+
+                <!-- This section is about services -->
+                <section id="services" class="services">
+                    <h2>Services</h2>
+                    <hr>
+                    <ul>
+                        <li>Wildlife Photography</li>
+                        <li>Landscape Photography</li>
+                        <li>Photo Prints</li>
+                        <li>Photography Workshops</li>
+                    </ul>
+                </section>
+
+                <!-- This section is about contact me -->
+                <section id="contact" class="contact">
+                    <h2>Contact Me</h2>
+                    <hr>
+                    <form action="some-url.com">
+                        <label>Name:</label>
+                        <input required id="name" type="text" name="name">
+
+                        <label>Email:</label>
+                        <input required id="email" type="email" name="email">
+
+                        <label>Message:</label>
+                        <textarea required id="message" name="message"></textarea>
+
+                        <button id="submit" type="submit">Send</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer>
+                <hr>
+                <p>© 2024 Emma Johnson Photography</p>
+                <p><a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

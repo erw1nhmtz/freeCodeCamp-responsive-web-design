@@ -1,0 +1,100 @@
+body {
+    background-image: url("/img/library-background.jpg");
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+hr {
+    color: #8B4513;
+    background-color: #8B4513;
+    height: 1px;
+}
+
+img {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MAIN */
+
+.menu {
+    background-color: burlywood;
+    width: 50%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.established {
+    font-style: italic;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.book-name {
+    text-align: left;
+    width: 50%;
+}
+
+.book-author {
+    text-align: right;
+    width: 50%;
+}
+
+.bottom-line {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer p {
+    font-size: 15px;
+}
+
+a:visited {
+    color: #8B4513;
+}
+
+a:hover {
+    color: #D2691E;
+}
+
+a:active {
+    color: #8B4513;
+}
+
+.address {
+    margin-bottom: 10px;
+}
