@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Space Adventure Registration</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/test1.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Space Adventure Registration</h1>
+        <p>Ready for an out-of-this-world experience? Sign up below!</p>
+
+        <form action="some-url" method="post">
+            <fieldset class="main-info">
+                <label for="name">Enter Your Earth Name:</label>
+                <input id="name" type="text" name="name" required>
+
+                <label for="surname">Enter Your Earth Surname:</label>
+                <input id="surname" type="text" name="surname" required>
+
+                <label for="email">Enter Your Galactic Email:</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="password">Create Your Cosmic Password:</label>
+                <input id="password" type="password" name="password" pattern="[a-zA-Z0-9]{12,}" required>
+            </fieldset>
+
+            <hr>
+
+            <fieldset class="space-role">
+                <legend>Preferred Space Role (required)</legend>
+
+                <div class="space-role-option">
+                    <input id="astronaut" type="radio" name="space-role" value="astronaut" checked>
+                    <label for="astronaut">Astronaut</label>
+                </div>
+
+                <div class="space-role-option">
+                    <input id="space-engineer" type="radio" name="space-role" value="space-engineer">
+                    <label for="space-engineer">Space Engineer</label>
+                </div>
+
+                <div class="space-role-option">
+                    <input id="xenobiologist" type="radio" name="space-role" value="xenobiologist">
+                    <label for="xenobiologist">Xenobiologist</label>
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <fieldset class="additional-info">
+                <label for="selfie">Upload your space selfie:</label>
+                <input id="selfie" type="file" name="selfie">
+
+                <label for="age">Input your Earth age (years):</label>
+                <input id="age" type="number" name="number" min="8" max="18000" required>
+
+                <label for="referrer">How did you discover our space program?</label>
+                <select id="referrer" name="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">Intergalactic News</option>
+                    <option value="2">Alien Abduction</option>
+                    <option value="3">Time Travel</option>
+                    <option value="4">Other</option>
+                </select>
+
+                <label for="space-dreams">Tell us about your space dreams:</label>
+                <textarea id="space-dreams" name="space-dreams" rows="3" cols="25" placeholder="I've always wanted to float among the stars..."></textarea>
+            </fieldset>
+
+            <div class="terms-and-conditions-container">
+                <input id="terms-and-conditions" type="checkbox" name="terms-and-conditions" required>
+                <label for="terms-and-conditions">I accept the <a href="https://www.bis-space.com/website-terms-and-conditions/" target="_blank">interplanetary terms and conditions</a></label>
+            </div>
+
+            <button id="submit" type="submit">Launch My Application</button>
+        </form>
+    </div>
+</body>
+</html>

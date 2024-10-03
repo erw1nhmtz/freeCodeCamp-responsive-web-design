@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+h1, p, a, label, legend {
+    color: white;
+    font-family: Tahoma, serif;
+}
+
+h1, p {
+    text-align: center;
+}
+
+hr {
+    margin-top: 3em;
+    border: 3px solid #3B3B4F;
+    border-top: 0;
+}
+
+#title {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.container {
+    background-color: #1B1B32;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 4em;
+}
+
+fieldset:first-of-type {
+    margin-top: 3em;
+}
+
+fieldset:last-of-type {
+    margin-top: 1em;
+}
+
+fieldset {
+    width: 60%;
+    max-width: 50vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+fieldset label, input {
+    display: block;
+    margin-bottom: 0.7em;
+}
+
+input, textarea, button, select {
+    width: 100%;
+    height: 2.5vh;
+    background-color: #0A0A23;
+    color: white;
+    font-size: 1rem;
+    border: none;
+}
+
+textarea {
+    min-height: 3em;
+    padding: 0;
+}
+
+select {
+    margin-bottom: 1em;
+}
+
+.account-type legend {
+    margin-bottom: 2em;
+}
+
+input[type="radio"] {
+    padding-top: 5px;
+    vertical-align: middle;
+}
+
+input[type="number"] {
+    padding: 0;
+}
+
+input[type="radio"], .account-type label {
+    display: inline;
+    width: unset;
+}
+
+input[type="checkbox"], .terms-and-conditions-container label {
+    display: inline;
+    width: unset;
+    vertical-align: middle;
+}
+
+.terms-and-conditions-container input {
+    margin-bottom: 0;
+}
+
+.terms-and-conditions-container {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+button {
+    display: block;
+    width: 70%;
+    min-height: 1em;
+    height: 2.1em;
+    border: 1px solid #FFFFFF;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0.5em auto 2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3B3B4F;
+}
