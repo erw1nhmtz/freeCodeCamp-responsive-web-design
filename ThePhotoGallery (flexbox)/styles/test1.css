@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, p, a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+.header {
+    width: 100%;
+}
+
+.title {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    padding-top: 3em;
+    padding-bottom: 2em;
+
+    background-color: #1A5F7A;
+    color: #ffffff;
+}
+
+.title-name, .title-slogan {
+    text-align: center;
+}
+
+.title-name {
+    font-size: 2.5rem;
+}
+
+.menu {
+    height: 4.7em;
+    background-color: #457B9D;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    height: 100%;
+}
+
+.menu a {
+    color: #ffffff;
+    
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    padding: 13px;
+
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #1D3557;
+    border-radius: 7px;
+}
+
+#gallery, #about, #contact {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-section {
+    background-color: #F1FAEE;
+}
+
+#gallery {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+#gallery img {
+    width: 100%;
+    max-width: 300px;
+
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+
+#about, #contact {
+    padding: 2em 7em;
+}
+
+.about-header {
+    margin-bottom: 0.5em;
+}
+
+.contact-email:visited {
+    color: #3E8BD8;
+}
+
+.footer {
+    width: 100%;
+
+    height: 4em;
+    background-color: #1D3557;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 1.1rem;
+}

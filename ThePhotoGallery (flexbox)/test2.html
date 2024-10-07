@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GreenLife</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/test2.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="images/greenleaf-logo.png" alt="GreenLeaf logo">
+            </div>
+            <div class="navigation">
+                <nav>
+                    <a class="button" href="#home">Home</a>
+                    <a class="button" href="#products">Products</a>
+                    <a class="button" href="#about">About Us</a>
+                    <a class="button" href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+
+            <!-- This seciton contains blurred image and a button lol -->
+            <section id="home">
+                <div class="background-img">
+                    <div class="content-wrapper">
+                        <a class="button" href="#products">Shop Now</a>
+                    </div>
+                </div>
+
+                <hr>
+            </section>
+
+            <!-- This section contains our products -->
+            <section id="products">
+                <h2>Our Products</h2>
+
+                <div class="products-container">
+                    <div class="product">
+                        <img src="images/bamboo-toothbrush.png" alt="bamboo toothbrush">
+                        <h3>Bamboo Toothbrush</h3>
+                        <p>Eco-friendly alternative to plastic toothbrushes</p>
+                        <a class="button" href="">Add to cart</a>
+                    </div>
+    
+                    <div class="product">
+                        <img src="images/reusable-water-bottle.jpg" alt="reusable water bottle">
+                        <h3>Reusable Water Bottle</h3>
+                        <p>Durable and stylish stainless steel bottle</p>
+                        <a class="button" href="">Add to cart</a>
+                    </div>
+    
+                    <div class="product">
+                        <img src="images/organic-cotton-tote.jpg" alt="organic cotton tote">
+                        <h3>Organic Cotton Tote</h3>
+                        <p>Versatile and eco-friendly shopping bag</p>
+                        <a class="button" href="">Add to cart</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- This section contains general information about our organization -->
+            <section id="about">
+                <h2>About GreenLife</h2>
+                <div class="about-container">
+                    <img src="images/greenleaf-logo.png" alt="GreanLeaf logo">
+                    <p>
+                        At GreenLife, we're committed to providing high-quality, 
+                        sustainable products that help reduce environmental impact. 
+                        Our team of passionate eco-enthusiasts works tirelessly 
+                        to source and develop innovative solutions for everyday life.
+                    </p>
+                </div>
+            </section>
+
+            <!-- This section contains a form for contacting us-->
+            <section id="contact">
+                <h2>Contact Us</h2>
+
+                <form method="post" action="">
+                    <input 
+                        id="input-name" 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your name" 
+                        required>
+
+                    <input 
+                        id="input-email" 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your email"
+                        required>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your Message"
+                        required>
+                    </textarea>
+
+                    <input
+                        id="submit"
+                        type="submit"
+                        value="Send Message">
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="links-container">
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="social-links">
+                    <h2>Connect With Us</h2>
+                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.instagram.com">Instagram</a>
+                    <a href="https://www.twitter.com">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="copyright-container">
+            <p>© 2024 GreenLife Products. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
