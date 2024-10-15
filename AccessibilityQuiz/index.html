@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accessibility Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ultra-mega-duper interesting and engaging quiz about HTML and CSS !" />
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <header>
+        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freecodecamp logo">
+        <h1>HTML/CSS Quiz</h1>
+        <nav>
+            <a href="#info">INFO</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="some-url" method="POST">
+
+            <!-- Student info -->
+            <section id="info">
+                <h2>Student Info</h2>
+                
+                <div class="info-rows">
+                    <div class="form-row">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" name="name" required/>
+                    </div>
+    
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" required/>
+                    </div>
+    
+                    <div class="form-row">
+                        <label for="birth-date">Date of birth:</label>
+                        <input id="birth-date" type="date" name="birth-date" required/>
+                    </div>
+                </div>
+            </section>
+
+            <section id="html">
+                <h2>HTML</h2>
+
+                <div class="question-block">
+                    <h3>1</h3>
+                    <p>
+                        The legend element represents a caption for the content of its parent fieldset element
+                    </p>
+
+                    <div class="form-row">
+                        <input id="q1-a1" type="radio" name="q1" value="true" checked/>
+                        <label for="q1-a1">True</label>
+                    </div>
+
+                    <div class="form-row">
+                        <input id="q1-a2" type="radio" name="q1" value="false"/>
+                        <label for="q1-a2">False</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>2</h3>
+                    <p>
+                        A label element nesting an input element is required 
+                        to have a for attribute with the same value as the input's id
+                    </p>
+
+                    <div class="form-row">
+                        <input id="q2-a1" type="radio" name="q2" value="true" checked/>
+                        <label for="q2-a1">True</label>
+                    </div>
+
+                    <div class="form-row">
+                        <input id="q2-a2" type="radio" name="q2" value="false"/>
+                        <label for="q2-a2">False</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>3</h3>
+                    <p>
+                        The &lt;head&gt; tag is used to define the main content of the HTML document.
+                    </p>
+
+                    <div class="form-row">
+                        <input id="q3-a1" type="radio" name="q3" value="true" checked/>
+                        <label for="q3-a1">True</label>
+                    </div>
+
+                    <div class="form-row">
+                        <input id="q3-a2" type="radio" name="q3" value="false"/>
+                        <label for="q3-a2">False</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>4</h3>
+                    <p>
+                        HTML stands for Hyper Text Markup Language.
+                    </p>
+
+                    <div class="form-row">
+                        <input id="q4-a1" type="radio" name="q4" value="true" checked/>
+                        <label for="q4-a1">True</label>
+                    </div>
+
+                    <div class="form-row">
+                        <input id="q4-a2" type="radio" name="q4" value="false"/>
+                        <label for="q4-a2">False</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>5</h3>
+                    <p>
+                        The &lt;br&gt; tag is used to create a hyperlink.
+                    </p>
+
+                    <div class="form-row">
+                        <input id="q5-a1" type="radio" name="q5" value="true" checked/>
+                        <label for="q5-a1">True</label>
+                    </div>
+
+                    <div class="form-row">
+                        <input id="q5-a2" type="radio" name="q5" value="false"/>
+                        <label for="q5-a2">False</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="css">
+                <h2>CSS</h2>
+
+                <div class="question-block">
+                    <p>
+                        Can the CSS margin property accept negative values?
+                    </p>
+
+                    <select name="select">
+                        <option selected="true" disabled="disabled" value="">(Select an option)</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="question-block">
+                    <p>Do you have any questions?</p>
+                    <textarea name="questions" cols="30" rows=3>
+                    </textarea>
+                </div>
+            </section>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <address>
+          <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+          San Francisco<br />
+          California<br />
+          USA
+        </address>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, p, a, #img-caption, li {
+    font-family: "Afacad Flux", sans-serif;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .grey-background {
+    background-color: #eee;
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+  
+  #header {
+    margin-top: 2em;
+  
+    width: 100%;
+  
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 3.8rem;
+  }
+  
+  #header p {
+    font-size: 1.4rem;
+    margin-top: -0.5em;
+    padding-bottom: 1em;
+  }
+  
+  #img-div {
+    margin: 1em 0;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #image {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  #img-caption {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+  }
+  
+  #tribute-info {
+    padding-top: 4em;
+    padding-bottom: 2em;
+  
+    margin-bottom: 2em;
+  }
+  
+  #tribute-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  #tribute-info ul {
+    width: 40%;
+    margin: 1em auto;
+  
+    font-size: 1.2rem;
+  }
+  
+  #tribute-info li {
+    margin: 1em 0;
+  }
+  
+  #quote {
+    width: 40%;
+  
+    font-size: 1.2rem;
+    font-style: italic;
+  
+    margin: 2em auto;
+  }
+  
+  #tribute-link {
+    color: #134B70;
+  }

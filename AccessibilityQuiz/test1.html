@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modern Web Development Quiz</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Test your knowledge of modern web development with this interactive quiz"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" />
+    <link rel="stylesheet" href="styles/test1.css" />
+</head>
+<body>
+    <header>
+        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp logo">
+        <h1 id="title">Modern Web Dev Quiz</h1>
+        <nav>
+            <a href="#intro">Intro</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#javascript">JavaScript</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="some-url" method="POST">
+            <!-- Intro section -->
+            <section id="intro">
+                <h2>Welcome, Developer!</h2>
+                <hr>
+                <p>
+                    Test your knowledge of modern web development techniques 
+                    and best practices. Fill out your info below to get started.
+                </p>
+
+                <div class="info-container">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" name="name" placeholder="John Doe" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+
+                        <input id="email" type="email" name="email" placeholder="johndoe@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Years of Experience</label>
+                        <input id="experience" type="number" name="experience" min="0" max="50" required/>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HTML section -->
+            <section id="html">
+                <h2>HTML5 Questions</h2>
+                <hr>
+
+                <div class="question-block">
+                    <h3>1. Semantic HTML</h3>
+                    <p>Which of the following is NOT a semantic HTML5 element?</p>
+
+                    <div class="radio-row">
+                        <input id="q1-a1" type="radio" name="q1" value="header" checked />
+                        <label for="q1-a1">&lt;header&gt;</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q1-a2" type="radio" name="q1" value="section" />
+                        <label for="q1-a2">&lt;section&gt;</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q1-a3" type="radio" name="q1" value="span" />
+                        <label for="q1-a3">&lt;span&gt;</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q1-a4" type="radio" name="q1" value="article" />
+                        <label for="q1-a4">&lt;article&gt;</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>2. HTML5 Forms</h3>
+                    <p>
+                        Which input type is used for date selection?
+                    </p>
+
+                    <div class="radio-row">
+                        <input id="q2-a1" type="radio" name="q2" value="text" checked />
+                        <label for="q2-a1">type="text"</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q2-a2" type="radio" name="q2" value="date" />
+                        <label for="q2-a2">type="date"</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q2-a3" type="radio" name="q2" value="datetime" />
+                        <label for="q2-a3">type="datetime"</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q2-a4" type="radio" name="q2" value="calendar" />
+                        <label for="q2-a4">type="calendar"</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CSS section -->
+            <section id="css">
+                <h2>CSS3 Questions</h2>
+                <hr>
+
+                <div class="question-block">
+                    <h3>3. Flexbox</h3>
+
+                    <div class="select-block">
+                        <label for="select">
+                            Which property is used on the 
+                            flex container to align items vertically?
+                        </label>
+        
+                        <select id="select" name="select">
+                            <option selected="true" disabled="disabled">(Select an option)</option>
+                            <option value="1">justify-content</option>
+                            <option value="2">align-items</option>
+                            <option value="3">flex-direction</option>
+                            <option value="4">align-content</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <h3>4. CSS Grid</h3>
+
+                    <p>What CSS Grid property is used to define the size of grid tracks?</p>
+                    
+                    <div class="radio-row">
+                        <input id="q4-a1" type="radio" name="q4" value="grid-template-areas" checked />
+                        <label for="q4-a1">grid-template-areas</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q4-a2" type="radio" name="q4" value="grid-template-columns" />
+                        <label for="q4-a2">grid-template-columns</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q4-a3" type="radio" name="q4" value="grid-auto-flow" />
+                        <label for="q4-a3">grid-auto-flow</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q4-a4" type="radio" name="q4" value="grid-gap" />
+                        <label for="q4-a4">grid-gap</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JavaScript section -->
+            <section id="javascript">
+                <h2>JavaScript Questions</h2>
+                <hr>
+
+                <div class="question-block">
+                    <h3>5. ES6 Features</h3>
+                    <p>
+                        Which of the following is NOT an ES6 feature?
+                    </p>
+
+                    <div class="radio-row">
+                        <input id="q5-a1" type="radio" name="q5" value="let-and-const" checked/>
+                        <label for="q5-a1">let and const declarations</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q5-a2" type="radio" name="q5" value="arrow-functions" />
+                        <label for="q5-a2">arrow functions</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q5-a3" type="radio" name="q5" value="promises" />
+                        <label for="q5-a3">promises</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="q5-a4" type="radio" name="q5" value="jQuery" />
+                        <label for="q5-a4">jQuery</label>
+                    </div>
+                </div>
+
+                <div class="textarea-block">
+                    <h3>6. Feedback</h3>
+                    
+                    <label for="comments-questions">
+                        Do you have any questions or comments 
+                        about modern web development? 
+                    </label>
+                    <textarea id="comments-questions" name="comments-questions" cols="30" rows="3" placeholder="Share your thoughts here..." required></textarea>
+                </div>
+            </section>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>
+            <p>San Francisco, California, USA</p>
+        </address>
+        <p>© 2024 Modern Web Dev Quiz. All rights reserved.</p>
+    </footer>
+</body>
+</html>
