@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NeoJS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NeoJS - the best modern JavaScript Framework." />
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/code-windows.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo-wrapper">
+            <img id="logo-img" src="images/neojs-logo.png" alt="NeoJS logo.">
+            <a id="logo-text" href="#home">NeoJS</a>
+        </div>
+        <nav id="navbar">
+            <a class="nav-link" href="#home">Home</a> 
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
+            <a class="nav-link" href="docs.html">Docs</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="main-section">
+            <img id="home-logo" src="images/neojs-logo-hq.png" alt="neojs logo.">
+            <h1 id="home-neojs">NeoJS</h1>
+            <a id="home-description">The library for web and native user interfaces</a>            
+            
+            <div id="home-buttons">
+                <a class="button-primary" href="#features">Features</a>
+                <a class="button-secondary" href="docs.html">Documentation</a>
+            </div>
+        </section>
+
+        <section id="features" class="main-section">
+            <h2 id="features-header">Features</h2>
+
+            <article class="features-article">
+                <div class="feature-number-wrapper number-one">
+                    <p class="feature-number">1</p>
+                </div>
+                
+                <div class="feature-content-block">
+                    <h3>Create user interfaces from components</h3>
+                    <p>
+                        NeoJS lets you build user interfaces out of individual pieces called components. 
+                    </p>
+                    
+                    <p>
+                        Create your own NeoJS components like <code>Thumbnail</code>, <code>LikeButton</code>, and <code>Video</code>. 
+                    </p>
+
+                    <p>
+                        Then combine them into entire screens, pages, and apps.
+                    </p>
+
+                    <br>
+                
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            Video.js
+                        </div>
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">Video</span>({ <span class="code-syntax-color-blue">video</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">return</span> (</p>
+                            <p class="code-line indent-2">&lt;<span class="code-syntax-color-yellow">div</span>&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-aqua">Thumbnail</span> <span class="code-syntax-color-blue">video</span>={video} /&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-yellow">a</span> <span class="code-syntax-color-blue">href</span>={video.<span class="code-syntax-color-blue">url</span>}&gt;</p>
+                            <p class="code-line indent-4">&lt;<span class="code-syntax-color-yellow">h3</span>&gt;{video.<span class="code-syntax-color-blue">title</span>}&lt;/<span class="code-syntax-color-yellow">h3</span>&gt;</p>
+                            <p class="code-line indent-4">&lt;<span class="code-syntax-color-yellow">p</span>&gt;{video.<span class="code-syntax-color-blue">description</span>}&lt;/<span class="code-syntax-color-yellow">p</span>&gt;</p>
+                            <p class="code-line indent-3">&lt;/<span class="code-syntax-color-yellow">a</span>&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-aqua">LikeButton</span> <span class="code-syntax-color-blue">video</span>={video} /&gt;</p>
+                            <p class="code-line indent-2">&lt;/<span class="code-syntax-color-yellow">div</span>&gt;</p>
+                            <p class="code-line indent-1">);</p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+                    
+                    <br>
+
+                    <p>
+                        Whether you work on your own or with thousands of other developers, using  
+                    </p>
+
+                    <p>
+                        NeoJS feels the same. It is designed to let you seamlessly combine components 
+                    </p>
+
+                    <p>
+                        written by independent people, teams, and organizations.
+                    </p>
+                </div>
+            </article>
+            
+            <article class="features-article">
+                <div class="feature-number-wrapper number-two">
+                    <p class="feature-number">2</p>
+                </div>
+                
+                <div class="feature-content-block">
+                    <h3>Write components with code and markup</h3>
+                    <p>
+                        NeoJS components are JavaScript functions. Want to show some content 
+                    </p>
+                    
+                    <p>
+                        conditionally? Use an <code>if</code> statement. Displaying a list? Try array <code>map()</code>. Learning
+                    </p>
+
+                    <p>
+                        NeoJS is learning programming.
+                    </p>
+
+                    <br>
+
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            VideoList.js
+                        </div>
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">VideoList</span>({ <span class="code-syntax-color-blue">videos</span>, <span class="code-syntax-color-blue">emptyHeading</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> count = videos.<span class="code-syntax-color-blue">length</span>;</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">let</span> heading = emptyHeading;</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">if</span> (count > <span class="code-syntax-color-red">0</span>) {</p>
+                            <p class="code-line indent-2"><span class="code-syntax-color-blue">const</span> noun = count > <span class="code-syntax-color-red">1</span> ? <span class="code-syntax-color-purple">'Videos'</span> : <span class="code-syntax-color-purple">'Video'</span>;</p>
+                            <p class="code-line indent-2">heading = count + <span class="code-syntax-color-purple">' &#8203 &#8203 '</span> + noun;</p>
+                            <p class="code-line indent-1">}</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">return</span> (</p>
+                            <p class="code-line indent-2">&lt;<span class="code-syntax-color-yellow">section</span>&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-yellow">h2</span>&gt;{heading}&lt;/<span class="code-syntax-color-yellow">h2</span>&gt;</p>
+                            <p class="code-line indent-3">{videos.<span class="code-syntax-color-aqua">map</span>(video =&gt;</p>
+                            <p class="code-line indent-4">&lt;<span class="code-syntax-color-aqua">Video</span> <span class="code-syntax-color-blue">key</span>={video.<span class="code-syntax-color-blue">id</span>} <span class="code-syntax-color-blue">video</span>={video} /&gt;</p>
+                            <p class="code-line indent-3">)}</p>
+                            <p class="code-line indent-2">&lt;/<span class="code-syntax-color-yellow">section</span>&gt;</p>
+                            <p class="code-line indent-1">);</p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <p>
+                        This markup syntax is called JSX. It is a JavaScript syntax extension popularized  
+                    </p>
+
+                    <p>
+                        by NeoJS. Putting JSX markup close to related rendering logic makes NeoJS 
+                    </p>
+
+                    <p>
+                        components easy to create, maintain, and delete.
+                    </p>
+                </div>
+            </article>
+
+            <article class="features-article">
+                <div class="feature-number-wrapper number-three">
+                    <p class="feature-number">3</p>
+                </div>
+                
+                <div class="feature-content-block">
+                    <h3>Add interactivity wherever you need it</h3>
+                    <p>
+                        NeoJS components receive data and return what should appear on the screen.  
+                    </p>
+                    
+                    <p>
+                        You can pass them new data in response to an interaction, like when the user 
+                    </p>
+
+                    <p>
+                        types into an input. NeoJS will then update the screen to match the new data.
+                    </p>
+
+                    <br>
+
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            SearchableVideoList.js
+                        </div>
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">import</span> { useState } <span class="code-syntax-color-blue">from</span> <span class="code-syntax-color-purple">'react'</span>;</p>
+                            <p class="code-line">&#8203</p>
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">SearchableVideoList</span>({ <span class="code-syntax-color-blue">videos</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> [searchText, setSearchText] = <span class="code-syntax-color-aqua">useState</span>(<span class="code-syntax-color-purple">'&#8203 '</span>);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> foundVideos = <span class="code-syntax-color-aqua">filterVideos</span>(videos, searchText);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">return</span> (</p>
+                            <p class="code-line indent-2">&lt;&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-aqua">SearchInput</span></p>
+                            <p class="code-line indent-4"><span class="code-syntax-color-blue">value</span>={searchText}</p>
+                            <p class="code-line indent-4"><span class="code-syntax-color-blue">onChange</span>={newText =&gt; <span class="code-syntax-color-aqua">setSearchText</span>(newText)} /&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-aqua">VideoList</span></p>
+                            <p class="code-line indent-4"><span class="code-syntax-color-blue">videos</span>={foundVideos}</p>
+                            <p class="code-line indent-4"><span class="code-syntax-color-blue">emptyHeading</span>={<span class="code-syntax-color-purple">`No matches for "</span>${searchText}<span class="code-syntax-color-purple">"`</span>} /&gt;</p>
+                            <p class="code-line indent-2">&lt;/&gt;</p>
+                            <p class="code-line indent-1">);</p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <p>
+                        You don’t have to build your whole page in NeoJS. Add NeoJS to your existing 
+                    </p>
+
+                    <p>
+                        HTML page, and render interactive NeoJS components anywhere on it.
+                    </p>
+                </div>
+            </article>
+
+            <article class="features-article">
+                <div class="feature-number-wrapper number-four">
+                    <p class="feature-number">4</p>
+                </div>
+                
+                <div class="feature-content-block">
+                    <h3>Go full-stack with a framework</h3>
+                    <p>
+                        NeoJS is a library. It lets you put components together, but it doesn’t prescribe  
+                    </p>
+                    
+                    <p>
+                        how to do routing and data fetching. To build an entire app with NeoJS, we 
+                    </p>
+
+                    <p>
+                        recommend a full-stack NeoJS framework like <a href="https://nextjs.org/" target="_blank">Next.js</a> or <a href="https://remix.run/" target="_blank">Remix</a>.
+                    </p>
+
+                    <br>
+
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            confs/[slug].js
+                        </div>
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">import</span> { db } <span class="code-syntax-color-blue">from</span> <span class="code-syntax-color-purple">'./database.js'</span>;</p>
+                            <p class="code-line"><span class="code-syntax-color-blue">import</span> { Suspense } <span class="code-syntax-color-blue">from</span> <span class="code-syntax-color-purple">'react'</span>;</p>
+                            <p class="code-line">&#8203</p>
+                            <p class="code-line"><span class="code-syntax-color-blue">async function</span> <span class="code-syntax-color-aqua">ConferencePage</span>({ <span class="code-syntax-color-blue">slug</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> conf = <span class="code-syntax-color-blue">await</span> db.<span class="code-syntax-color-blue">Confs</span>.<span class="code-syntax-color-blue">find</span>({ <span class="code-syntax-color-blue">slug</span> });</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">return</span> (</p>
+                            <p class="code-line indent-2">&lt;<span class="code-syntax-color-aqua">ConferenceLayout</span> <span class="code-syntax-color-blue">conf</span>={conf}&gt;</p>
+                            <p class="code-line indent-3">&lt;<span class="code-syntax-color-aqua">Suspense</span> <span class="code-syntax-color-blue">fallback</span>={&lt;<span class="code-syntax-color-aqua">TalksLoading</span> /&gt;}&gt;</p>
+                            <p class="code-line indent-4">&lt;<span class="code-syntax-color-aqua">Talks</span> <span class="code-syntax-color-blue">confId</span>={conf.<span class="code-syntax-color-blue">id</span>} /&gt;</p>
+                            <p class="code-line indent-3">&lt;/<span class="code-syntax-color-aqua">Suspense</span>&gt;</p>
+                            <p class="code-line indent-2">&lt;/<span class="code-syntax-color-aqua">ConferenceLayout</span>&gt;</p>
+                            <p class="code-line indent-1">);</p>
+                            <p class="code-line">}</p>
+                            <p class="code-line">&#8203</p>
+                            <p class="code-line"><span class="code-syntax-color-blue">async function</span> <span class="code-syntax-color-aqua">Talks</span>({ <span class="code-syntax-color-blue">confId</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> talks = <span class="code-syntax-color-blue">await</span> db.<span class="code-syntax-color-blue">Talks</span>.<span class="code-syntax-color-blue">findAll</span>({ <span class="code-syntax-color-blue">confId</span> });</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> videos = talks.<span class="code-syntax-color-blue">map</span>(talk =&gt; talk.<span class="code-syntax-color-blue">video</span>);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">return</span> &lt;<span class="code-syntax-color-aqua">SearchableVideoList</span> <span class="code-syntax-color-blue">videos</span>={videos} /&gt;;</p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <p>
+                        NeoJS is also an architecture. Frameworks that implement it let you fetch data in
+                    </p>
+
+                    <p>
+                        asynchronous components that run on the server or even during the build. Read
+                    </p>
+
+                    <p>
+                        data from a file or a database, and pass it down to your interactive components.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="pricing" class="main-section">
+            <h2 id="pricing-header">Pricing Plans</h2>
+
+            <div id="pricing-plans-wrapper">
+                <div class="pricing-plan">
+                    <h3 class="plan-name">Starter</h3>
+                    <p class="plan-price">$5/month</p>
+                    <p class="plan-feature">Core Features</p>
+                    <p class="plan-feature">Community Support</p>
+                    <p class="plan-feature last-feature">1 Project</p>
+                    <a class="button-primary" href="">Buy Now</a>
+                </div>
+
+                <div class="pricing-plan">
+                    <h3 class="plan-name">Pro</h3>
+                    <p class="plan-price">$15/month</p>
+                    <p class="plan-feature">All Starter Features</p>
+                    <p class="plan-feature">Priority Support</p>
+                    <p class="plan-feature last-feature">Unlimited Projects</p>
+                    <a class="button-primary" href="">Buy Now</a>
+                </div>
+
+                <div class="pricing-plan">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-price">Custom</p>
+                    <p class="plan-feature">All Pro Features</p>
+                    <p class="plan-feature">Dedicated Support</p>
+                    <p class="plan-feature last-feature">Custom Integrations</p>
+                    <a class="button-primary" href="">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscribe" class="main-section">
+            <h2 id="subscribe-header">
+                <span>Welcome to the</span>
+                <span>NeoJS Community</span>
+            </h2>
+            <img id="subscribe-neojs-logo" src="images/neojs-logo-hq.png" alt="NeoJS logo.">
+
+            <h2 id="subscribe-form-header">Stay Updated</h2>
+            <form method="post" action="">
+                <input id="email" type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 NeoJS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

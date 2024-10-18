@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NeoJS Documentation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NeoJS Documentation Page" />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/code-windows.css"/>
+    <link rel="stylesheet" href="styles/docs.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo-wrapper" href="index.html">
+            <a id="logo-link-wrapper" href="index.html">
+                <img id="logo-img" src="images/neojs-logo.png" alt="NeoJS logo">
+                <h1 id="logo-text">NeoJS</h1>
+            </a>
+        </div>
+
+        <div id="nav-links">
+            <a class="nav-link" href="#overview">Overview</a>
+            <a class="nav-link" href="#hooks">Hooks</a>
+            <a class="nav-link" href="#components">Components</a>
+            <a class="nav-link" href="#apis">APIs</a>
+            <a class="nav-link" href="#rules-of-neojs">Rules of NeoJS</a>
+            <a class="nav-link" href="#legacy-neojs-apis">Legacy NeoJS APIs</a>
+        </div>
+    </nav>
+
+    <main id="main-section">
+        <section id="overview">
+            <div class="section-content-wrapper">
+                <h2>React Reference Overview</h2>
+                <p class="sub-header">This section provides detailed reference documentation for working with React.
+                    For an introduction to React, please visit the <a class="text-link" href="">Learn</a> section.</p>
+
+                <p>The React reference documentation is broken down into functional subsections:</p>
+
+                <article>
+                    <h3>React</h3>
+
+                    <p>Programmatic React features:</p>
+
+                    <ul>
+                        <li><a class="text-link" href="">Hooks</a> - Use different React features from your components.</li>
+                        <li><a class="text-link" href="">Components</a> - Built-in components that you can use in your JSX.</li>
+                        <li><a class="text-link" href="">APIs</a> - APIs that are useful for defining components.</li>
+                        <li><a class="text-link" href="">Directives</a> - Provide instructions to bundlers compatible with React Server Components.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>React DOM</h3>
+                    <p>React-dom contains features that are only supported for web applications (which run in the browser DOM environment). This section is broken into the following:</p>
+
+                    <ul>
+                        <li><a class="text-link" href="">Hooks</a> - Hooks for web applications which run in the browser DOM environment.</li>
+                        <li><a class="text-link" href="">Components</a> - React supports all of the browser built-in HTML and SVG components.</li>
+                        <li><a class="text-link" href="">APIs</a> - The <code>react-dom</code> package contains methods supported only in web applications.</li>
+                        <li><a class="text-link" href="">Client APIs</a> - The <code>react-dom/client</code> APIs let you render React components on the client (in the browser).</li>
+                        <li><a class="text-link" href="">Server APIs</a> - The <code>react-dom/server</code> APIs let you render React components to HTML on the server.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Rules of React</h3>
+                    <p>React has idioms — or rules — for how to express patterns in a way that is easy to understand and yields high-quality applications:</p>
+                
+                    <ul>
+                        <li><a class="text-link" href="">Components and Hooks must be pure</a> – Purity makes your code easier to understand, debug, and allows React to automatically optimize your components and hooks correctly.</li>
+                        <li><a class="text-link" href="">React calls Components and Hooks</a> – React is responsible for rendering components and hooks when necessary to optimize the user experience.</li>
+                        <li><a class="text-link" href="">Rules of Hooks</a> – Hooks are defined using JavaScript functions, but they represent a special type of reusable UI logic with restrictions on where they can be called.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Legacy APIs</h3>
+
+                    <ul>
+                        <li><a class="text-link" href="">Legacy APIs</a> - Exported from the react package, but not recommended for use in newly written code.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="hooks">
+            <div class="section-content-wrapper">
+                <h2>Built-in React Hooks</h2>
+                <p class="sub-header">
+                    <i>Hooks</i> let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. 
+                    This page lists all built-in Hooks in React.
+                </p>
+            
+                <article>
+                    <h3>State Hooks</h3>
+                    <p>
+                        <i>State</i> lets a component <a class="text-link" href="">“remember” information like user input.</a> 
+                        For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.
+                    </p>
+                
+                    <p>To add state to a component, use one of these Hooks:</p>
+                    <ul>
+                        <li><code><a class="text-link" href="">useState</a></code> declares a state variable that you can update directly.</li>
+                        <li><code><a class="text-link" href="">useReducer</a></code> declares a state variable with the update logic inside a <a class="text-link" href="">reducer function.</a></li>
+                    </ul>
+
+                    <div class="code-window">
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">ImageGallery</span>() {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> [index, setIndex] = <span class="code-syntax-color-aqua">useState</span>(<span class="code-syntax-color-red">0</span>);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-grey">// ...</span></p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Context Hooks</h3>
+
+                    <p>
+                        <i>Context</i> lets a component <a class="text-link" href="">receive information from distant parents without passing it as props.</a> For example, 
+                        your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
+                    </p>
+                    
+                    <ul>
+                        <li><code><a class="text-link" href="">useContext</a></code> reads and subscribes to a context.</li>
+                    </ul>
+                    <div class="code-window">
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">Button</span>() {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> = <span class="code-syntax-color-aqua">useContext</span>(ThemeContext);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-grey">// ...</span></p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Ref Hooks</h3>
+
+                    <p><i>Refs</i> let a component <a class="text-link" href="">hold some information that isn’t used for rendering,</a> like a DOM node or a timeout ID. 
+                        Unlike with state, updating a ref does not re-render your component. 
+                        Refs are an “escape hatch” from the React paradigm. 
+                        They are useful when you need to work with non-React systems, such as the built-in browser APIs.</p>
+                
+                    <ul>
+                        <li><code><a class="text-link" href="">useRef</a></code> declares a ref. You can hold any value in it, but most often it’s used to hold a DOM node.</li>
+                        <li><code><a class="text-link" href="">useImperativeHandle</a></code> lets you customize the ref exposed by your component. This is rarely used.</li>
+                    </ul>
+
+                    <div class="code-window">
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">Form</span>() {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> inputRef = <span class="code-syntax-color-aqua">useRef</span>(<span class="code-syntax-color-blue">null</span>);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-grey">// ...</span></p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Effect Hooks</h3>
+
+                    <p><i>Effects</i> let a component <a class="text-link" href="">connect to and synchronize with external systems.</a> This includes dealing with network, browser DOM, animations, 
+                        widgets written using a different UI library, and other non-React code.</p>
+                
+                    <ul>
+                        <li><code><a class="text-link" href="">useEffect</a></code> connects a component to an external system.</li>
+                    </ul>
+                    
+                    <div class="code-window">
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">ChatRoom</span>({ roomId }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-aqua">useEffect</span>(() => {</p>
+                            <p class="code-line indent-2"><span class="code-syntax-color-blue">const</span> connection = <span class="code-syntax-color-blue">createConnection</span>(roomId);</p>
+                            <p class="code-line indent-2">connection.<span class="code-syntax-color-aqua">connect</span>();</p>
+                            <p class="code-line indent-2"><span class="code-syntax-color-blue">return</span> () => connection.<span class="code-syntax-color-blue">disconnect</span>();</p>
+                            <p class="code-line indent-1">}, [roomId]);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-grey">// ...</span></p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+
+                    <p>Effects are an “escape hatch” from the React paradigm. Don’t use Effects to orchestrate the data flow of your application. 
+                        If you’re not interacting with an external system, <a class="text-link" href="">you might not need an Effect.</a>
+                    </p>
+                    
+                    <p>There are two rarely used variations of <code>useEffect</code> with differences in timing:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">useLayoutEffect</a></code> fires before the browser repaints the screen. You can measure layout here.</li>
+                        <li><code><a class="text-link" href="">useInsertionEffect</a></code> fires before React makes changes to the DOM. Libraries can insert dynamic CSS here.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Performance Hooks</h3>
+
+                    <p>A common way to optimize re-rendering performance is to skip unnecessary work. 
+                        For example, you can tell React to reuse a cached calculation or to skip a 
+                        re-render if the data has not changed since the previous render.
+                    </p>
+
+                    <p>To skip calculations and unnecessary re-rendering, use one of these Hooks:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">useMemo</a></code> lets you cache the result of an expensive calculation.</li>
+                        <li><code><a class="text-link" href="">useCallback</a></code> lets you cache a function definition before passing it down to an optimized component.</li>
+                    </ul>
+
+                    <div class="code-window">
+                        <div class="code-window-main">
+                            <p class="code-line"><span class="code-syntax-color-blue">function</span> <span class="code-syntax-color-aqua">TodoList</span>({ 
+                                <span class="code-syntax-color-blue">todos</span>, 
+                                <span class="code-syntax-color-blue">tab</span>, 
+                                <span class="code-syntax-color-blue">theme</span> }) {</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-blue">const</span> visibleTodos = <span class="code-syntax-color-aqua">useMemo</span>(() => 
+                                <span class="code-syntax-color-aqua">filterTodos</span>(todos, tab), [todos, tab]);</p>
+                            <p class="code-line indent-1"><span class="code-syntax-color-grey">// ...</span></p>
+                            <p class="code-line">}</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Sometimes, you can’t skip re-rendering because the screen actually needs to update. 
+                        In that case, you can improve performance by separating blocking updates that must be synchronous (like typing into an input) 
+                        from non-blocking updates which don’t need to block the user interface (like updating a chart).
+                    </p>
+
+                    <p>To prioritize rendering, use one of these Hooks:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">useTransition</a></code> lets you mark a state transition as non-blocking and allow other updates to interrupt it.</li>
+                        <li><code><a class="text-link" href="">useDeferredValue</a></code> lets you defer updating a non-critical part of the UI and let other parts update first.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Other Hooks</h3>
+
+                    <p>These Hooks are mostly useful to library authors and aren’t commonly used in the application code.</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">useDebugValue</a></code> lets you customize the label React DevTools displays for your custom Hook.</li>
+                        <li><code><a class="text-link" href="">useId</a></code> lets a component associate a unique ID with itself. Typically used with accessibility APIs.</li>
+                        <li><code><a class="text-link" href="">useSyncExternalStore</a></code> lets a component subscribe to an external store.</li>
+                        <li><code><a class="text-link" href="">useActionState</a></code> allows you to manage state of actions.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Your own Hooks</h3>
+
+                    <p>You can also <a class="text-link" href="">define your own custom Hooks</a> as JavaScript functions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="components">
+            <div class="section-content-wrapper">
+                <h2>React DOM Components</h2>
+                <p class="sub-header">
+                    React supports all of the browser built-in <a class="text-link" href="">HTML</a> and <a class="text-link" href="">SVG</a> components.
+                </p>
+
+                <article>
+                    <h3>Common components</h3>
+
+                    <p>All of the built-in browser components support some props and events.</p>
+
+                    <ul>
+                        <li><a class="text-link" href="">Common components (e.g. <code>&lt;div&gt;</code>)</a></li>
+                    </ul>
+
+                    <p>This includes React-specific props like <code>ref</code> and <code>dangerouslySetInnerHTML</code>.</p>
+                </article>
+
+                <article>
+                    <h3>Form components</h3>
+
+                    <p>These built-in browser components accept user input:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">&lt;input&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;select&gt;</a></code></li>
+                        <li><code><a class="text-link" hred="">&lt;textarea&gt;</a></code></li>
+                    </ul>
+
+                    <p>They are special in React because passing the <code>value</code> prop to them makes them <i><a class="text-link" href="">controlled</a></i>.</p>
+                </article>
+
+                <article>
+                    <h3>Resource and Metadata Components</h3>
+
+                    <p>These built-in browser components let you load external resources or annotate the document with metadata:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">&lt;link&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;meta&gt;</a></code></li>
+                        <li><code><a class="text-link" hred="">&lt;script&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;style&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;title&gt;</a></code></li>
+                    </ul>
+
+                    <p>
+                        They are special in React because React can render them into the document head, suspend while resources are loading, 
+                        and enact other behaviors that are described on the reference page for each specific component.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>All HTML components</h3>
+
+                    <p>React supports all built-in browser HTML components. This includes:</p>
+                
+                    <ul>
+                        <li><code><a class="text-link" href="">&lt;aside&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;audio&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;b&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;base&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;bdi&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;bdo&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;blockquote&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;body&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;br&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;button&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;canvas&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;caption&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;cite&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;code&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;col&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;colgroup&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;data&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;datalist&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;dd&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;del&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;details&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;dfn&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;dialog&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;div&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;dl&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;dt&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;em&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;embed&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;fieldset&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;figcaption&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;figure&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;footer&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;form&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;h1&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;head&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;header&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;hgroup&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;hr&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;html&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;i&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;iframe&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;img&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;input&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;ins&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;kbd&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;label&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;legend&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;li&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;link&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;main&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;map&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;mark&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;menu&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;meta&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;meter&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;nav&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;noscript&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;object&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;ol&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;optgroup&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;option&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;output&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;p&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;picture&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;pre&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;progress&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;q&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;rp&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;rt&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;ruby&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;s&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;samp&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;script&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;section&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;select&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;slot&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;small&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;source&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;span&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;strong&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;style&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;sub&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;summary&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;sup&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;table&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;tbody&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;td&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;template&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;textarea&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;tfoot&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;th&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;thead&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;time&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;title&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;tr&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;track&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;u&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;ul&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;var&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;video&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;wbr&gt;</a></code></li>
+                    </ul>
+
+                    <div class="note-block">
+                        <h4>Note</h4>
+
+                        <p>Similar to the <a class="text-link" href="">DOM standard,</a> React uses a <code>camelCase</code> convention for prop names.
+                             For example, you’ll write <code>tabIndex</code> instead of <code>tabindex</code>.
+                             You can convert existing HTML to JSX with an <a class="text-link" href="">online converter</a>.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Custom HTML elements</h3>
+
+                    <p>If you render a tag with a dash, like <code>&lt;my-element&gt;</code>, React will assume you want to render a <a class="text-link" href="">custom HTML element</a>. 
+                        In React, rendering custom elements works differently from rendering built-in browser tags:
+                    </p>
+
+                    <ul>
+                        <li>All custom element props are serialized to strings and are always set using attributes.</li>
+                        <li>Custom elements <code>accept</code> class rather than <code>className</code>, and for rather than <code>htmlFor</code>.</li>
+                    </ul>
+
+                    <p>If you render a built-in browser HTML element with an <code><a class="text-link" href="">is</a></code> attribute, it will also be treated as a custom element.</p>
+                
+                    <div class="note-block">
+                        <h4>Note</h4>
+
+                        <p><a class="text-link" href="">A future version of React will include more comprehensive support for custom elements.</a></p>
+                        <p>You can try it by upgrading React packages to the most recent experimental version:</p>
+
+                        <ul>
+                            <li><code>react@experimental</code></li>
+                            <li><code>react-dom@experimental</code></li>
+                        </ul>
+
+                        <p>Experimental versions of React may contain bugs. Don’t use them in production.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>All SVG components</h3>
+
+                    <p>React supports all built-in browser SVG components. This includes:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">&lt;a&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;animate&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;animateMotion&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;animateTransform&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;circle&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;clipPath&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;defs&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;desc&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;discard&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;ellipse&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feBlend&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feColorMatrix&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feComponentTransfer&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feComposite&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feConvolveMatrix&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feDiffuseLighting&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feDisplacementMap&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feDistantLight&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feDropShadow&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feFlood&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feFuncA&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feFuncB&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feFuncG&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feFuncR&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feGaussianBlur&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feImage&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feMerge&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feMergeNode&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feMorphology&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feOffset&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;fePointLight&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feSpecularLighting&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feSpotLight&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feTile&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;feTurbulence&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;filter&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;foreignObject&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;g&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;hatch&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;hatchpath&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;image&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;line&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;linearGradient&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;marker&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;mask&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;metadata&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;mpath&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;path&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;pattern&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;polygon&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;polyline&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;radialGradient&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;rect&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;script&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;set&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;stop&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;style&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;svg&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;switch&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;symbol&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;text&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;textPath&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;title&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;tspan&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;use&gt;</a></code></li>
+                        <li><code><a class="text-link" href="">&lt;view&gt;</a></code></li>
+                    </ul>
+
+                    <div class="note-block">
+                        <h4>Note</h4>
+
+                        <p>
+                            Similar to the <a class="text-link" href="">DOM standard</a>, React uses a <code>camelCase</code> convention for prop names. For example, you’ll write <code>tabIndex</code> instead of <code>tabindex</code>.
+                             You can convert existing SVG to JSX with an <a class="text-link" href="">online converter</a>.
+                        </p>
+
+                        <p>Namespaced attributes also have to be written without the colon:</p>
+
+                        <ul>
+                            <li><code>xlink:actuate</code> becomes <code>xlinkActuate</code>.</li>
+                            <li><code>xlink:arcrole</code> becomes <code>xlinkArcrole</code>.</li>
+                            <li><code>xlink:href</code> becomes <code>xlinkHref</code>.</li>
+                            <li><code>xlink:role</code> becomes <code>xlinkRole</code>.</li>
+                            <li><code>xlink:show</code> becomes <code>xlinkShow</code>.</li>
+                            <li><code>xlink:title</code> becomes <code>xlinkTitle</code>.</li>
+                            <li><code>xlink:type</code> becomes <code>xlinkType</code>.</li>
+                            <li><code>xml:base</code> becomes <code>xmlBase</code>.</li>
+                            <li><code>xml:lang</code> becomes <code>xmlLang</code>.</li>
+                            <li><code>xml:space</code> becomes <code>xmlSpace</code>.</li>
+                            <li><code>xmlns:xlink</code> becomes <code>xmlnsXlink</code>.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="apis">
+            <div class="section-content-wrapper">
+                <h2>React DOM APIs</h2>
+
+                <p class="sub-header">
+                    The <code>react-dom</code> package contains methods that are only supported for the web applications (which run in the browser DOM environment). 
+                    They are not supported for React Native.
+                </p>
+
+                <article>
+                    <h3>APIs</h3>
+                    
+                    <p>These APIs can be imported from your components. They are rarely used:</p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">createPortal</a></code> lets you render child components in a different part of the DOM tree.</li>
+                        <li><code><a class="text-link" href="">flushSync</a></code> lets you force React to flush a state update and update the DOM synchronously.</li>
+                    </ul>
+
+                    <h3>Resource Preloading APIs</h3>
+                    
+                    <p>These APIs can be used to make apps faster by pre-loading resources such as scripts, 
+                        stylesheets, and fonts as soon as you know you need them, for example before navigating 
+                        to another page where the resources will be used.
+                    </p>
+
+                    <p>
+                        <a class="text-link" href="">React-based frameworks</a> frequently handle resource loading for you, so you might not have to call these APIs yourself.
+                         Consult your framework’s documentation for details.
+                    </p>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">prefetchDNS</a></code> lets you prefetch the IP address of a DNS domain name that you expect to connect to.</li>
+                        <li><code><a class="text-link" href="">preconnect</a></code> lets you connect to a server you expect to request resources from, even if you don’t know what resources you’ll need yet.</li>
+                        <li><code><a class="text-link" href="">preload</a></code> lets you fetch a stylesheet, font, image, or external script that you expect to use.</li>
+                        <li><code><a class="text-link" href="">preloadModule</a></code> lets you fetch an ESM module that you expect to use.</li>
+                        <li><code><a class="text-link" href="">preinit</a></code> lets you fetch and evaluate an external script or fetch and insert a stylesheet.</li>
+                        <li><code><a class="text-link" href="">preinitModule</a></code> lets you fetch and evaluate an ESM module.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Entry points</h3>
+
+                    <p>The <code>react-dom</code> package provides two additional entry points:</p>
+                
+                    <ul>
+                        <li><code><a class="text-link" href="">react-dom/client</a></code> contains APIs to render React components on the client (in the browser).</li>
+                        <li><code><a class="text-link" href="">react-dom/server</a></code> contains APIs to render React components on the server.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Deprecated APIs</h3>
+
+                    <div class="deprecated-block">
+                        <h4>Deprecated</h4>
+                        <p>These APIs will be removed in a future major version of React.</p>
+                    </div>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">findDOMNode</a></code> finds the closest DOM node corresponding to a class component instance.</li>
+                        <li><code><a class="text-link" href="">hydrate</a></code> mounts a tree into the DOM created from server HTML. Deprecated in favor of <code><a class="text-link" href="">hydrateRoot</a></code>.</li>
+                        <li><code><a class="text-link" href="">render</a></code> mounts a tree into the DOM. Deprecated in favor of <code><a class="text-link" href="">createRoot</a></code>.</li>
+                        <li><code><a class="text-link" href="">unmountComponentAtNode</a></code> unmounts a tree from the DOM. Deprecated in favor of <code><a class="text-link" href="">root.unmount()</a></code>.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="rules-of-neojs">
+            <div class="section-content-wrapper">
+                <h2>Rules of React</h2>
+
+                <p class="sub-header">
+                    Just as different programming languages have their own ways of expressing concepts, 
+                    React has its own idioms — or rules — for how to express patterns in a way that is easy to understand and yields high-quality applications.
+                </p>
+
+                <ul>
+                    <li><a class="text-link" href>Components and Hooks must be pure</a></li>
+                    <li><a class="text-link" href>React calls Components and Hooks</a></li>
+                    <li><a class="text-link" href>Rules of Hooks</a></li>
+                </ul>
+
+                <article>
+                    <div class="note-block">
+                        <h4>Note</h4>
+                        <p>To learn more about expressing UIs with React, we recommend reading <a class="text-link" href="">Thinking in React</a>.</p>
+                    </div>
+    
+                    <p>
+                        This section describes the rules you need to follow to write idiomatic React code. Writing idiomatic React code can help you write well organized, safe, and composable applications. 
+                        These properties make your app more resilient to changes and makes it easier to work with other developers, libraries, and tools.
+                    </p>
+    
+                    <br>
+                    <p>
+                        These rules are known as the Rules of React. They are rules – and not just guidelines – in the sense that if they are broken, your app likely has bugs. 
+                        Your code also becomes unidiomatic and harder to understand and reason about.
+                    </p>
+    
+                    <br>
+                    <p>
+                        We strongly recommend using <a class="text-link" href="">Strict Mode</a> alongside React’s <a class="text-link" href="">ESLint plugin</a> to help your codebase follow the Rules of React. 
+                        By following the Rules of React, you’ll be able to find and address these bugs and keep your application maintainable.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Components and Hooks must be pure</h3>
+
+                    <p><a class="text-link" href="">Purity in Components and Hooks</a> is a key rule of React that makes your app predictable, easy to debug, and allows React to automatically optimize your code.</p>
+                
+                    <ul>
+                        <li><a class="text-link" href="">Components must be idempotent</a> – React components are assumed to always return the same output with respect to their inputs – props, state, and context.</li>
+                        <li><a class="text-link" href="">Side effects must run outside of render</a> – Side effects should not run in render, as React can render components multiple times to create the best possible user experience.</li>
+                        <li><a class="text-link" href="">Props and state are immutable</a> – A component’s props and state are immutable snapshots with respect to a single render. Never mutate them directly.</li>
+                        <li><a class="text-link" href="">Return values and arguments to Hooks are immutable</a> – Once values are passed to a Hook, you should not modify them. Like props in JSX, values become immutable when passed to a Hook.</li>
+                        <li><a class="text-link" href="">Values are immutable after being passed to JSX</a> – Don’t mutate values after they’ve been used in JSX. Move the mutation before the JSX is created.</li>
+                    </ul>
+                </article>
+                
+                <article>
+                    <h3>React calls Components and Hooks</h3>
+
+                    <p>
+                        <a class="text-link" href="">React is responsible for rendering components and hooks when necessary to optimize the user experience.</a> 
+                        It is declarative: you tell React what to render in your component’s logic, and React will figure out how best to display it to your user.
+                    </p>
+
+                    <ul>
+                        <li><a class="text-link" href="">Never call component functions directly</a> – Components should only be used in JSX. Don’t call them as regular functions.</li>
+                        <li><a class="text-link" href="">Never pass around hooks as regular values</a> – Hooks should only be called inside of components. Never pass it around as a regular value.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Rules of Hooks</h3>
+
+                    <p>
+                        Hooks are defined using JavaScript functions, but they represent a special type of reusable UI logic with restrictions on where they can be called.
+                        You need to follow the <a class="text-link" href="">Rules of Hooks</a> when using them.
+                    </p>
+
+                    <ul>
+                        <li><a class="text-link" href="">Only call Hooks at the top level</a> – Don’t call Hooks inside loops, conditions, or nested functions. Instead, always use Hooks at the top level of your React function, before any early returns.</li>
+                        <li><a class="text-link" href="">Only call Hooks from React functions</a> – Don’t call Hooks from regular JavaScript functions.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="legacy-neojs-apis">
+            <div class="section-content-wrapper">
+                <h2>Legacy React APIs</h2>
+
+                <p class="sub-header">
+                    These APIs are exported from the <code>react</code> package, but they are not recommended for use in newly written code.
+                    See the linked individual API pages for the suggested alternatives.
+                </p>
+
+                <article>
+                    <h3>Legacy APIs</h3>
+                    
+                    <ul>
+                        <li><code><a class="text-link" href="">Children</a></code> lets you manipulate and transform the JSX received as the <code>children</code> prop. <a class="text-link" href="">See alternatives</a>.</li>
+                        <li><code><a class="text-link" href="">cloneElement</a></code> lets you create a React element using another element as a starting point. <a class="text-link" href="">See alternatives</a>.</li>
+                        <li><code><a class="text-link" href="">Component</a></code> lets you define a React component as a JavaScript class. <a class="text-link" href="">See alternatives</a>.</li>
+                        <li><code><a class="text-link" href="">createElement</a></code> lets you create a React element. Typically, you’ll use JSX instead.</li>
+                        <li><code><a class="text-link" href="">createRef</a></code> creates a ref object which can contain arbitrary value. <a class="text-link" href="">See alternatives</a>.</li>
+                        <li><code><a class="text-link" href="">isValidElement</a></code> checks whether a value is a React element. Typically used with <code><a class="text-link" href="">cloneElement</a></code>.</li>
+                        <li><code><a class="text-link" href="">PureComponent</a></code> is similar to <code><a class="text-link" href="">Component</a></code>, but it skip re-renders with same props. <a class="text-link" href="">See alternatives</a>.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Deprecated APIs</h3>
+
+                    <div class="deprecated-block">
+                        <h4>Deprecated</h4>
+
+                        <p>These APIs will be removed in a future major version of React.</p>
+                    </div>
+
+                    <ul>
+                        <li><code><a class="text-link" href="">createFactory</a></code> lets you create a function that produces React elements of a certain type.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

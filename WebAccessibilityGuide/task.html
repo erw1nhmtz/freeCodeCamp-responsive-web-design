@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Accessibility Documentation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Web Accessibility Documentation for beginners"/>
+  <link rel="stylesheet" href="styles/task.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>Web Accessibility Guide</h1>
+      <a class="nav-link" href="#introduction">Introduction</a>
+      <a class="nav-link" href="#semantic_HTML">Semantic HTML</a>
+      <a class="nav-link" href="#aria">ARIA</a>
+      <a class="nav-link" href="#keyboard_navigation">Keyboard Navigation</a>
+      <a class="nav-link" href="#color_contrast">Color Contrast</a>
+      <a class="nav-link" href="#reference">Reference</a>
+    </header>
+  </nav>
+  <main id="main-doc">
+    <section id="introduction" class="main-section">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+
+      <article>
+        <p>
+          Web accessibility refers to the inclusive practice of ensuring there are no barriers that prevent interaction with, or access to, websites on the World Wide Web by people with disabilities.
+        </p>
+
+        <p>
+          When sites are correctly designed, developed and edited, generally all users have equal access to information and functionality.
+        </p>
+
+        <p>
+          This documentation covers key aspects of web accessibility that developers should consider when building websites.
+        </p>
+
+        <code>
+         // Example of an accessible button &lt;button type="button" aria-label="Close" onclick="closeModal()"&gt;X&lt;/button&gt;
+        </code>
+      </article>
+    </section>
+
+    <section id="semantic_HTML" class="main-section">
+      <header>
+        <h2>Semantic HTML</h2>
+      </header>
+
+      <article>
+        <p>
+          Semantic HTML is HTML that introduces meaning to the web page rather than just presentation. Examples of semantic HTML tags include:
+        </p>
+
+        <ul>
+          <li>&lt;header&gt;</li>
+          <li>&lt;nav&gt;</li>
+          <li>&lt;main&gt;</li>
+          <li>&lt;article&gt;</li>
+          <li>&lt;aside&gt;</li>
+        </ul>
+
+        <p>
+          Using semantic HTML helps screen readers and other assistive technologies understand the structure of your web page.
+        </p>
+
+        <p>
+          Here's an example of semantic HTML structure:
+        </p>
+
+        <code>
+&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+        </code>
+      </article>
+    </section>
+
+    <section id="aria" class="main-section">
+      <header>
+        <h2>ARIA</h2>
+      </header>
+
+      <article>
+        <p>
+          ARIA (Accessible Rich Internet Applications) is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.
+        </p>
+
+        <p>
+          ARIA supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies.
+        </p>
+
+        <p>
+          Here are some common ARIA attributes:
+        </p>
+
+        <ul>
+          <li>aria-label</li>
+          <li>aria-labelledby</li>
+          <li>aria-hidden</li>
+          <li>role</li>
+        </ul>
+
+        <p>
+          Example of ARIA in use:
+        </p>
+
+        <code>
+          &lt;button aria-label="Close" onclick="closeModal()"&gt;X&lt;/button&gt;
+        </code>
+      </article>
+    </section>
+
+    <section id="keyboard_navigation" class="main-section">
+      <header>
+        <h2>Keyboard Navigation</h2>
+      </header>
+
+      <article>
+        <p>
+          Keyboard navigation is crucial for users who can't use a mouse. All interactive elements should be keyboard accessible.
+        </p>
+
+        <p>
+          Ensure that users can tab through your site in a logical order.
+        </p>
+
+        <p>
+          Use the tabindex attribute to control the order of focus:
+        </p>
+
+        <code>
+          &lt;div tabindex="0"&gt;This div is keyboard focusable&lt;/div&gt;
+        </code>
+
+        <p>
+          Remember to style focus states to make it clear which element is currently focused:
+        </p>
+
+        <code>
+          :focus {
+  outline: 2px solid blue;
+}
+        </code>
+      </article>
+    </section>
+
+    <section id="color_contrast" class="main-section">
+      <header>
+        <h2>Color Contrast</h2>
+      </header>
+
+      <article>
+        <p>
+          Sufficient color contrast between text and its background is important for users with visual impairments.
+        </p>
+
+        <p>
+          The Web Content Accessibility Guidelines (WCAG) 2.1 recommend the following contrast ratios:
+        </p>
+
+        <ul>
+          <li>At least 4.5:1 for normal text</li>
+          <li>At least 3:1 for large text</li>
+        </ul>
+
+        <p>
+          You can use online tools to check your color contrast ratios.
+        </p>
+
+        <p>
+          Here's an example of CSS with good color contrast:
+        </p>
+
+        <code>
+          body {
+  color: #333; /* Dark gray text */
+  background-color: #fff; /* White background */
+}
+        </code>
+      </article>
+    </section>
+
+    <section id="reference" class="main-section">
+      <header>
+        <h2>Reference</h2>
+      </header>
+      <article>
+        <p>
+        </p>
+
+        <ul>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.1</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">MDN Web Docs - Accessibility</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank">WAI-ARIA Overview</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
