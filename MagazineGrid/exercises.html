@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grid Layout</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My CSS Grid Layout testing ground" />
+
+    <style>
+        :root {
+            --standard-column-gap: 0.8em;
+            --standard-row-gap: 0.8em;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        body {
+            padding: 1em;
+        }
+
+        .wrapper {
+            background-color: rgb(240, 240, 240);
+            padding: 1em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5em;
+        }
+
+        .grid-one-one {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+            column-gap: var(--standard-column-gap);
+            row-gap: var(--standard-row-gap);
+        }
+
+        .grid-one-one div {
+            background-color: #3498DB;
+            color: white;
+
+            height: 3em;
+        }
+
+        .grid-one-two {
+            display: grid;
+            grid-template-columns: 13em auto 13em;
+
+            column-gap: var(--standard-column-gap);
+            row-gap: var(--standard-row-gap);
+        }
+
+        .grid-one-two div {
+            background-color: #2ECC71;
+            color: white;
+
+            height: 3em;
+        }
+
+        .grid-one-three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 5em 15em 5em;
+
+            column-gap: var(--standard-column-gap);
+            row-gap: var(--standard-row-gap);
+        }
+
+        .grid-one-three div {
+            background-color: #E74C3C;
+            color: white;
+
+            min-height: 3em;
+        }
+
+        .grid-one-four {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            grid-auto-flow: column;
+
+            gap: var(--standard-column-gap);
+        }
+
+        .grid-one-four div {
+            background-color: #9B59B6;
+            color: white;
+            
+            min-height: 3em;
+        }
+
+        .grid-one-five {
+            display: grid;
+            grid-template-columns: 1fr 30em  10em;
+            grid-template-rows: 5em 15em 3em;
+
+            gap: var(--standard-column-gap);
+        }
+
+        .element-one {
+            grid-row: 3 / 4;
+        }
+
+        .element-two {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+
+        .element-three {
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+        }
+
+        .grid-one-five div {
+            background-color: #F1C40F;
+            color: white;
+
+            min-height: 3em;
+        }
+
+        .grid-one-six {
+            display: grid;
+            grid-template-columns: repeat(3, 14em);
+            grid-template-rows: repeat(3, 14em);
+        }
+
+        .fr-1, .fr-2, .fr-3, .fr-4, .fr-5 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .fr-1 div, .fr-2 div, .fr-3 div, .fr-4 div, .fr-5 div {
+            background-color: #E74C3C !important;
+            min-height: 1.5em;
+        }
+
+        .fr-1 {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        .fr-2 {
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+        }
+
+        .fr-3 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+
+        .fr-4 {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+        }
+
+        .fr-5 {
+            grid-row: 3 / 4;
+            grid-column: 3 / 4;
+        }
+
+        .fr-1-1, .fr-2-1, .fr-3-1, .fr-4-1, .fr-5-1 {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        .fr-1-2, .fr-2-2, .fr-3-2, .fr-4-2, .fr-5-2 {
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+        }
+
+        .fr-1-3, .fr-2-3, .fr-3-3, .fr-4-3, .fr-5-3 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+
+        .fr-1-4, .fr-2-4, .fr-3-4, .fr-4-4, .fr-5-4 {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+        }
+
+        .fr-1-5, .fr-2-5, .fr-3-5, .fr-4-5, .fr-5-5 {
+            grid-row: 3 / 4;
+            grid-column: 3 / 4;
+        }
+
+        .grid-one-six div {
+            background-color: #3498DB;
+            min-height: 3em;
+        }
+
+        .flex div{
+            display: flex;
+        }
+
+        .center div {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outline div {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <!-- Exercise 1-1 -->
+        <section>
+            <div class="title">Exercise 1-1: Simple Equal Columns</div>
+            <div class="wrapper">
+                <div class="grid-one-one flex center">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 1-2 -->
+        <section>
+            <div class="title">Exercies 1-2: Fixed + Auto Columns </div>
+            <div class="wrapper">
+                <div class="grid-one-two flex center">
+                    <div>Fixed</div>
+                    <div>Auto</div>
+                    <div>Fixed</div>
+                    <div>Fixed</div>
+                    <div>Auto</div>
+                    <div>Fixed</div>
+                    <div>Fixed</div>
+                    <div>Auto</div>
+                    <div>Fixed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 1-3 -->
+        <section>
+            <div class="title">Exercise 1-3: Defined Rows</div>
+            <div class="wrapper">
+                <div class="grid-one-three flex center">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 1-4 -->
+        <section>
+            <div class="title">Exercise 1-4: Responsive Auto-Fit</div>
+            <div class="wrapper">
+                <div class="grid-one-four flex center">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 1-5 -->
+        <section>
+            <div class="title">Exercise 1-5: specified start/end</div>
+            <div class="wrapper">
+                <div class="grid-one-five flex center">
+                    <div class="element-one">1</div>
+                    <div class="element-two">2</div>
+                    <div class="element-three">3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 1-6 -->
+        <div class="title">Exercise 1-6: Fractal</div>
+        <div class="wrapper">
+            <div class="grid-one-six">
+                <div class="fr-1">
+                    <div class="fr-1-1"></div>
+                    <div class="fr-1-2"></div>
+                    <div class="fr-1-3"></div>
+                    <div class="fr-1-4"></div>
+                    <div class="fr-1-5"></div>
+                </div>
+                <div class="fr-2">
+                    <div class="fr-2-1"></div>
+                    <div class="fr-2-2"></div>
+                    <div class="fr-2-3"></div>
+                    <div class="fr-2-4"></div>
+                    <div class="fr-2-5"></div>
+                </div>
+                <div class="fr-3">
+                    <div class="fr-3-1"></div>
+                    <div class="fr-3-2"></div>
+                    <div class="fr-3-3"></div>
+                    <div class="fr-3-4"></div>
+                    <div class="fr-3-5"></div>
+                </div>
+                <div class="fr-4">
+                    <div class="fr-4-1"></div>
+                    <div class="fr-4-2"></div>
+                    <div class="fr-4-3"></div>
+                    <div class="fr-4-4"></div>
+                    <div class="fr-4-5"></div>
+                </div>
+                <div class="fr-5">
+                    <div class="fr-5-1"></div>
+                    <div class="fr-5-2"></div>
+                    <div class="fr-5-3"></div>
+                    <div class="fr-5-4"></div>
+                    <div class="fr-5-5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
