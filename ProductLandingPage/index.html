@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PhotoPro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A landing page for our best PhotoPro equipment store." />
+  
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <div id="logo-wrapper">
+      <img 
+      id="header-img" 
+      src=""
+      alt="PhotoPro logo"
+      loading="lazy"/>
+      <h1>PhotoPro</h1>
+    </div>
+
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#how-it-works">How It Works</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="get-started">
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+        <div id="title-wrapper">
+          <label id="title">Professional Photography Equipment</label>
+        <label id="sub-title">Capture moments that last forever</label>
+        </div>
+        <input id="email" type="email" name="email" placeholder="Enter your email for exclusive deals" required/>
+        <input id="submit" class="button" type="submit" name="submit-button" value="Get Started" />
+      </form>
+    </section>
+
+    <section id="features">
+      <div class="feature">
+        <div class="feature-icon">📸</div>
+        <div class="feature-description">
+          <h2>Premium Quality</h2>
+          <p>All our equipment is sourced from top manufacturers</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-description">
+          <h2>Fast Shipping</h2>
+          <p>Free next-day delivery on all orders</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💫</div>
+        <div class="feature-description">
+          <h2>Expert Support</h2>
+          <p>24/7 access to professional photographers</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <iframe 
+      id="video" 
+      src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      </iframe>
+    </section>
+
+    <section id="pricing">
+      <div class="pricing-plan">
+        <div class="plan-head">
+          <h2 class="plan-name">Starter Kit</h2>
+        </div>
+        <div class="plan-body">
+          <h3 class="plan-price">$600</h3>
+
+          <p>Entry-level DSLR</p>
+          <p>18-55mm Lens</p>
+          <p>Basic Accessories</p>
+
+          <button class="button">SELECT</button>
+        </div>
+      </div>
+
+      <div class="pricing-plan">
+        <div class="plan-head">
+          <h2 class="plan-name">Pro Kit</h2>
+        </div>
+        <div class="plan-body">
+          <h3 class="plan-price">$1299</h3>
+
+          <p>Professional DSLR</p>
+          <p>24-70mm Lens</p>
+          <p>Complete Accessory Kit</p>
+
+          <button class="button">SELECT</button>
+        </div>
+      </div>
+
+      <div class="pricing-plan">
+        <div class="plan-head">
+          <h2 class="plan-name">Studio Kit</h2>
+        </div>
+        <div class="plan-body">
+          <h3 class="plan-price">$2499</h3>
+
+          <p>Full-Frame Camera</p>
+          <p>Multiple Pro Lenses</p>
+          <p>Studio Equipment</p>
+
+          <button class="button">SELECT</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="links-and-copyright">
+      <div id="links">
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+        <a href="">Contact</a>
+      </div>
+      <div id="copyright">
+        <p>Copyright 2024, Original Trombones</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
