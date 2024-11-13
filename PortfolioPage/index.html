@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>John Doe - Software Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="My test portfolio page showcasing my HTML/CSS skills." />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fontdiner+Swanky&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/83456c7128.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="initials">
+      <p>JD</p>
+    </div>
+    <nav id="navbar">
+      <a class="nav-link" href="#welcome-section">
+        <p>Home</p>
+      </a>
+      <a class="nav-link" href="#projects">
+        <p>Projects</p>
+      </a>
+      <a class="nav-link" href="#skills-and-technologies">
+        <p>Skills</p>
+      </a>
+      <a class="nav-link" href="#contact">
+        <p>Contact</p>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <!-- Welcome section -->
+    <section id="welcome-section">
+      <h1 id="welcome-title">Hello, I'm John Doe</h1>
+      <h2 id="welcome-subtitle">Full Stack Developer & UI/UX Enthusiast</h2>
+      <div id="welcome-icons">
+        <i class="fa-solid fa-code"></i>
+        <i class="fa-solid fa-display"></i>
+        <i class="fa-solid fa-mobile"></i>
+      </div>
+    </section>
+
+    <!-- Projects section section -->
+    <section id="projects">
+      <h2 id="projects-title">Featured Projects</h2>
+      <div id="projects-grid">
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img 
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">Tribute Page</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">React • Node.js • MongoDB</h4>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">Random Quote Machine</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">JavaScript • Weather API • CSS Grid</h4>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">JavaScript Calculator</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">Vue.js • Firebase • Tailwind CSS</h4>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img 
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">Data Across the Globe</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">React Native • GraphQL • TypeScript</h4>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">Wikipedia Viewer</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">React Native • GraphQL • TypeScript</h4>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <a class="project-link-wrapper" href="some-url" target="_blank">
+            <img 
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+            loading="lazy"
+            />
+            <div class="project-name-container">
+                <code><</code>
+                <h3 class="project-name">Tic Tac Toe Game</h3>
+                <code>/></code>
+            </div>
+            <h4 class="project-stack">Vue.js • Firebase • Tailwind CSS</h4>
+          </a>
+        </div>
+      </div>
+
+      <a id="profile-link" class="button" href="some-url" target="_blank">
+        <p>Show all</p>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </section>
+
+    <!-- Skills & Technologies section -->
+    <section id="skills-and-technologies">
+      <h2 id="skills-title">Skills & Technologies</h2>
+      <div id="skills-grid">
+        <div class="skills-tile">
+          <h3 class="skills-name">Frontend</h3>
+          <p>HTML/CSS</p>
+          <p>JavaScript</p>
+          <p>React</p>
+          <p>Vue.js</p>
+        </div>
+        
+        <div class="skills-tile">
+          <h3 class="skills-name">Backend</h3>
+          <p>Node.js</p>
+          <p>Python</p>
+          <p>MongoDB</p>
+          <p>SQL</p>
+        </div>
+        
+        <div class="skills-tile">
+          <h3 class="skills-name">Tools</h3>
+          <p>Git</p>
+          <p>Docker</p>
+          <p>AWS</p>
+          <p>Figma</p>
+        </div>
+      </div>
+
+      <div id="news-ticker">
+        <p>I can even do things like that!</p>
+      </div>
+    </section>
+
+    <!-- Let's connect section -->
+    <section id="contact">
+      <h2 id="contact-title">Let's Connect</h2>
+      <p id="contact-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+
+      <div id="contact-buttons">
+        <button class="button">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </button>
+
+        <button class="button">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </button>
+
+        <button class="button">
+          <i class="fa-solid fa-envelope"></i>
+          Email
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>**This is just a fake portfolio. All the projects and contact details given are not real. </p>
+    <p>© 2024 Alex Chen. All rights reserved.</p>
+  </footer>
+</body>
+</html>
